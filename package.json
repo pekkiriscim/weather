@@ -1,0 +1,19 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Quickly access accurate weather information with a clean, modern and user-friendly design.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pekkiriscim/weather.git"
+  },
+  "author": "Mustafa Pekkirişci",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pekkiriscim/weather/issues"
+  },
+  "homepage": "https://github.com/pekkiriscim/weather#readme"
+}
