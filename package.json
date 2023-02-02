@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/pekkiriscim/weather#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "browser-sync": "^2.27.11",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.0"
   }
 }
