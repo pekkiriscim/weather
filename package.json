@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/pekkiriscim/weather/issues"
   },
-  "homepage": "https://github.com/pekkiriscim/weather#readme"
+  "homepage": "https://github.com/pekkiriscim/weather#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
