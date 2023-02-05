@@ -4,7 +4,9 @@
   "description": "Quickly access accurate weather information with a clean, modern and user-friendly design.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "development": "gulp development",
+    "build": "gulp build",
+    "production": "gulp production"
   },
   "repository": {
     "type": "git",
@@ -29,5 +31,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
     "sass": "^1.58.0"
-  }
+  },
+  "browserslist": [
+    "> 0%"
+  ]
 }
