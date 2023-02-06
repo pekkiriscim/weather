@@ -25,7 +25,7 @@ gulp.task("buildcss", () => {
 
 gulp.task("buildjs", () => {
   return gulp
-    .src("src/js/**.js")
+    .src("src/js/**/*.js")
     .pipe(concat("main.min.js"))
     .pipe(terser())
     .pipe(gulp.dest("build/js"));
@@ -61,3 +61,40 @@ gulp.task("buildlive", () => {
 });
 
 gulp.task("production", gulp.series("build", gulp.parallel("buildlive")));
+
+gulp.task("developmentcss", () => {
+  return gulp
+    .src("src/scss/main.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass().on("error", sass.logError))
+    .pipe(autoprefixer({ cascade: false }))
+    .pipe(sourcemaps.write(""))
+    .pipe(gulp.dest("src/css"))
+    .pipe(browserSync.stream());
+});
+
+gulp.task("developmentclean", () => {
+  return del(["src/css"]);
+});
+
+gulp.task("developmentlive", () => {
+  browserSync.init({
+    server: {
+      baseDir: "src",
+      index: "index.html",
+    },
+    notify: false,
+  });
+
+  gulp.watch("src/scss(**/*.scss", gulp.series("developmentcss"));
+  gulp.watch("src/js/**/*.js").on("change", browserSync.reload);
+  gulp.watch("src/**/*.html").on("change", browserSync.reload);
+});
+
+gulp.task(
+  "development",
+  gulp.series(
+    "developmentclean",
+    gulp.parallel("developmentcss", "developmentlive")
+  )
+);
