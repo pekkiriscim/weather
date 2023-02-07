@@ -14,53 +14,53 @@ const devScript =
   '<script src="js/main.js"></script><script src="js/weather.js"></script>';
 const prodScript = '<script src="js/main.min.js"></script>';
 
-gulp.task("buildcss", () => {
+gulp.task("distcss", () => {
   return gulp
     .src("src/scss/main.scss")
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(rename("main.min.css"))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("dist/css"));
 });
 
-gulp.task("buildjs", () => {
+gulp.task("distjs", () => {
   return gulp
     .src("src/js/**/*.js")
     .pipe(concat("main.min.js"))
     .pipe(terser())
-    .pipe(gulp.dest("build/js"));
+    .pipe(gulp.dest("dist/js"));
 });
 
-gulp.task("buildhtml", () => {
+gulp.task("disthtml", () => {
   return gulp
     .src("src/index.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(replace("css/main.css", "css/main.min.css"))
     .pipe(replace(devScript, prodScript))
     .pipe(rename("index.min.html"))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("dist"));
 });
 
-gulp.task("buildclean", () => {
-  return del(["build"]);
+gulp.task("distclean", () => {
+  return del(["dist"]);
 });
 
 gulp.task(
-  "build",
-  gulp.series("buildclean", gulp.parallel("buildcss", "buildjs", "buildhtml"))
+  "dist",
+  gulp.series("distclean", gulp.parallel("distcss", "distjs", "disthtml"))
 );
 
-gulp.task("buildlive", () => {
+gulp.task("distlive", () => {
   browserSync.init({
     server: {
-      baseDir: "build",
+      baseDir: "dist",
       index: "index.min.html",
     },
     notify: false,
   });
 });
 
-gulp.task("production", gulp.series("build", gulp.parallel("buildlive")));
+gulp.task("production", gulp.series("dist", gulp.parallel("distlive")));
 
 gulp.task("developmentcss", () => {
   return gulp
