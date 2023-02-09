@@ -86,7 +86,7 @@ gulp.task("developmentlive", () => {
     notify: false,
   });
 
-  gulp.watch("src/scss(**/*.scss", gulp.series("developmentcss"));
+  gulp.watch("src/scss/**/*.scss", gulp.series("developmentcss"));
   gulp.watch("src/js/**/*.js").on("change", browserSync.reload);
   gulp.watch("src/**/*.html").on("change", browserSync.reload);
 });
