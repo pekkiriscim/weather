@@ -3,7 +3,6 @@ const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 const sourcemaps = require("gulp-sourcemaps");
-const concat = require("gulp-concat");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
 const rename = require("gulp-rename");
@@ -11,8 +10,12 @@ const replace = require("gulp-replace");
 const del = require("del");
 
 const devScript =
-  '<script src="js/main.js"></script><script src="js/weather.js"></script>';
-const prodScript = '<script src="js/main.min.js"></script>';
+  '<script type="module" src="js/icons.js"></script><script type="module" src="js/main.js"></script><script type="module" src="js/weather.js"></script>';
+const prodScript =
+  '<script type="module" src="js/icons.min.js"></script><script type="module" src="js/main.min.js"></script><script type="module" src="js/weather.min.js"></script>';
+
+const devModule = "/icons";
+const prodModule = "/icons.min";
 
 gulp.task("distcss", () => {
   return gulp
@@ -26,8 +29,9 @@ gulp.task("distcss", () => {
 gulp.task("distjs", () => {
   return gulp
     .src("src/js/**/*.js")
-    .pipe(concat("main.min.js"))
     .pipe(terser())
+    .pipe(replace(devModule, prodModule))
+    .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("dist/js"));
 });
 
