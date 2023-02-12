@@ -1,0 +1,25 @@
+.header-large-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: $margin-large;
+  padding: $padding-small-y $padding-small-x;
+  border-radius: $border-radius;
+  background-color: $light-primary;
+
+  .header-large-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-large-button-text {
+    @include typography($medium, $font-size-small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    margin-left: $margin-small;
+    color: $dark-primary;
+  }
+}

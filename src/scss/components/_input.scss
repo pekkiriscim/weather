@@ -1,0 +1,15 @@
+.header-large-search-input {
+  @include typography($regular, $font-size-small);
+  color: $light-primary;
+  height: 52px;
+  width: 100%;
+  padding: $padding-small-y $padding-small-x $padding-small-y 0px;
+  outline: none;
+  border-width: 0px;
+  border-radius: 0px $border-radius $border-radius 0px;
+  background-color: $light-secondary;
+
+  &::placeholder {
+    color: $light-tertiary;
+  }
+}

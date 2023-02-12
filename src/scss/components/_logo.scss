@@ -1,0 +1,29 @@
+.header-large-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: $margin-large;
+  padding: $padding-small-y $padding-small-x;
+  border-radius: $border-radius;
+  background-color: $light-secondary;
+}
+
+.header-large-search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $padding-small-y $margin-small $padding-small-y $padding-small-x;
+  border-radius: $border-radius 0px 0px $border-radius;
+  background-color: $light-secondary;
+}
+
+.header-large-location,
+.header-large-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: $margin-large;
+  padding: $padding-small-y $padding-small-x;
+  border-radius: $border-radius;
+  background-color: $light-secondary;
+}

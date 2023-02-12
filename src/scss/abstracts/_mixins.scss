@@ -3,3 +3,27 @@
   font-weight: $font-weight;
   font-size: $font-size;
 }
+
+@mixin media-query($breakpoint) {
+  @if $breakpoint == "xsmall" {
+    @media screen and (max-width: 320px) {
+      @content;
+    }
+  } @else if $breakpoint == "small" {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == "medium" {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == "large" {
+    @media screen and (max-width: 992px) {
+      @content;
+    }
+  } @else if $breakpoint == "xlarge" {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+}
