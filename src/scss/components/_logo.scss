@@ -17,8 +17,44 @@
   background-color: $light-secondary;
 }
 
-.header-large-location,
+.header-large-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: $margin-large;
+  padding: $padding-small-y $padding-small-x;
+  border-radius: $border-radius;
+  background-color: $light-secondary;
+
+  @include media-query("medium") {
+    display: none;
+  }
+}
+
 .header-large-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: $margin-large;
+  padding: $padding-small-y $padding-small-x;
+  border-radius: $border-radius;
+  background-color: $light-secondary;
+
+  @include media-query("medium") {
+    margin-left: auto;
+  }
+}
+
+.header-medium-search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $padding-small-y $margin-small $padding-small-y $padding-small-x;
+  border-radius: $border-radius 0px 0px $border-radius;
+  background-color: $light-secondary;
+}
+
+.header-medium-location {
   display: flex;
   align-items: center;
   justify-content: center;

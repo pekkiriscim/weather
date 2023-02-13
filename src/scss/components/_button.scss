@@ -7,6 +7,10 @@
   border-radius: $border-radius;
   background-color: $light-primary;
 
+  @include media-query("small") {
+    display: none;
+  }
+
   .header-large-button-icon {
     display: flex;
     align-items: center;
@@ -14,6 +18,32 @@
   }
 
   .header-large-button-text {
+    @include typography($medium, $font-size-small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    margin-left: $margin-small;
+    color: $dark-primary;
+  }
+}
+
+.header-small-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: $padding-small-y $padding-small-x;
+  border-radius: $border-radius;
+  background-color: $light-primary;
+
+  .header-small-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-small-button-text {
     @include typography($medium, $font-size-small);
     display: flex;
     align-items: center;

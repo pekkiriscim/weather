@@ -1,4 +1,5 @@
-.header-large-search-input {
+.header-large-search-input,
+.header-medium-search-input {
   @include typography($regular, $font-size-small);
   color: $light-primary;
   height: 52px;
