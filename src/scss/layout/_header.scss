@@ -5,24 +5,7 @@
   justify-content: center;
   max-width: 1200px;
   width: 100%;
-  padding: $padding-large-y $padding-grid-xlarge;
-
-  @include media-query("xlarge") {
-    padding: $padding-large-y $padding-grid-large;
-  }
-
-  @include media-query("large") {
-    padding: $padding-large-y $padding-grid-medium;
-  }
-
-  @include media-query("medium") {
-    padding: $padding-large-y $padding-grid-small;
-  }
-
-  @include media-query("small") {
-    padding: $padding-large-y $padding-grid-xsmall;
-  }
-
+  padding-bottom: $padding-large-y;
   .header-large {
     display: flex;
     justify-content: space-between;
