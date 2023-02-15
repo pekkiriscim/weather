@@ -1,0 +1,8 @@
+.heading {
+  @include typography($font-size-28, $regular-400, $light-primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  padding-bottom: $spacing-40;
+}

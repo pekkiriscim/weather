@@ -2,29 +2,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: $margin-large;
-  padding: $padding-small-y $padding-small-x;
+  margin-right: $spacing-16;
+  padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
-  background-color: $light-secondary;
+  background-color: $light-secondary-color;
 }
 
 .header-large-search-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: $padding-small-y $margin-small $padding-small-y $padding-small-x;
-  border-radius: $border-radius 0px 0px $border-radius;
-  background-color: $light-secondary;
+  padding: $spacing-14 $spacing-12 $spacing-14 $spacing-16;
+  border-radius: $border-radius $spacing-0 $spacing-0 $border-radius;
+  background-color: $light-secondary-color;
 }
 
 .header-large-location {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: $margin-large;
-  padding: $padding-small-y $padding-small-x;
+  margin-left: $spacing-16;
+  padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
-  background-color: $light-secondary;
+  background-color: $light-secondary-color;
 
   @include media-query("medium") {
     display: none;
@@ -35,10 +35,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: $margin-large;
-  padding: $padding-small-y $padding-small-x;
+  margin-left: $spacing-16;
+  padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
-  background-color: $light-secondary;
+  background-color: $light-secondary-color;
 
   @include media-query("medium") {
     margin-left: auto;
@@ -49,17 +49,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: $padding-small-y $margin-small $padding-small-y $padding-small-x;
-  border-radius: $border-radius 0px 0px $border-radius;
-  background-color: $light-secondary;
+  padding: $spacing-14 $spacing-12 $spacing-14 $spacing-16;
+  border-radius: $border-radius $spacing-0 $spacing-0 $border-radius;
+  background-color: $light-secondary-color;
 }
 
 .header-medium-location {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: $margin-large;
-  padding: $padding-small-y $padding-small-x;
+  margin-left: $spacing-16;
+  padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
-  background-color: $light-secondary;
+  background-color: $light-secondary-color;
 }

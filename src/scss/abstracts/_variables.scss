@@ -1,22 +1,27 @@
-$light-primary: #0f172a;
-$dark-primary: #ffffff;
-$light-secondary: #f8fafc;
-$dark-secondary: #1e293b;
-$light-tertiary: #64748b;
-$dark-tertiary: #94a3b8;
+$light-primary-color: #0f172a;
+$light-secondary-color: #f8fafc;
+$light-tertiary-color: #64748b;
+
+$dark-primary-color: #ffffff;
+$dark-secondary-color: #1e293b;
+$dark-tertiary-color: #94a3b8;
+
+$spacing-0: 0px;
+$spacing-6: 6px;
+$spacing-12: 12px;
+$spacing-14: 14px;
+$spacing-16: 16px;
+$spacing-20: 20px;
+$spacing-24: 24px;
+$spacing-32: 32px;
+$spacing-40: 40px;
+
+$grid-margin-xsmall: 10px;
+$grid-margin-small: 30px;
+$grid-margin-medium: 40px;
+$grid-margin-large: 50px;
+$grid-margin-xlarge: 60px;
+
+$line-weight: 1px;
 
 $border-radius: 8px;
-$margin-small: 12px;
-$margin-large: 16px;
-
-$padding-small-x: 16px;
-$padding-small-y: 14px;
-$padding-medium-x: 20px;
-$padding-medium-y: 16px;
-$padding-large-y: 42px;
-
-$padding-grid-xsmall: 10px;
-$padding-grid-small: 30px;
-$padding-grid-medium: 40px;
-$padding-grid-large: 50px;
-$padding-grid-xlarge: 60px;

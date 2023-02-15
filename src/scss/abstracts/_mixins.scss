@@ -1,7 +1,8 @@
-@mixin typography($font-weight, $font-size) {
+@mixin typography($font-size, $font-weight, $font-color) {
   font-family: $font-family;
-  font-weight: $font-weight;
   font-size: $font-size;
+  font-weight: $font-weight;
+  color: $font-color;
 }
 
 @mixin media-query($breakpoint) {

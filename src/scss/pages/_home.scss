@@ -4,40 +4,25 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
 
-body {
-  padding: $padding-large-y $padding-grid-xlarge;
-  max-width: 1200px;
+  body {
+    padding: $spacing-40 $grid-margin-xlarge;
+    max-width: 1200px;
 
-  @include media-query("xlarge") {
-    padding: $padding-large-y $padding-grid-large;
+    @include media-query("xlarge") {
+      padding: $spacing-32 $grid-margin-large;
+    }
+
+    @include media-query("large") {
+      padding: $spacing-24 $grid-margin-medium;
+    }
+
+    @include media-query("medium") {
+      padding: $spacing-20 $grid-margin-small;
+    }
+
+    @include media-query("small") {
+      padding: $spacing-16 $grid-margin-xsmall;
+    }
   }
-
-  @include media-query("large") {
-    padding: $padding-large-y $padding-grid-medium;
-  }
-
-  @include media-query("medium") {
-    padding: $padding-large-y $padding-grid-small;
-  }
-
-  @include media-query("small") {
-    padding: $padding-large-y $padding-grid-xsmall;
-  }
-}
-
-.title {
-  @include typography($regular, $font-size-large);
-  color: $light-primary;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: auto;
-  padding-bottom: $padding-large-y;
-}
-
-.current {
-  display: flex;
-  width: 100%;
 }

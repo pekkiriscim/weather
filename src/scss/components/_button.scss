@@ -2,10 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: $margin-large;
-  padding: $padding-small-y $padding-small-x;
+  margin-left: $spacing-16;
+  padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
-  background-color: $light-primary;
+  background-color: $light-primary-color;
 
   @include media-query("small") {
     display: none;
@@ -18,13 +18,12 @@
   }
 
   .header-large-button-text {
-    @include typography($medium, $font-size-small);
+    @include typography($font-size-16, $medium-500, $dark-primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: $spacing-12;
     white-space: nowrap;
-    margin-left: $margin-small;
-    color: $dark-primary;
   }
 }
 
@@ -33,9 +32,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: $padding-small-y $padding-small-x;
+  padding: $spacing-14 $spacing-0;
   border-radius: $border-radius;
-  background-color: $light-primary;
+  background-color: $light-primary-color;
 
   .header-small-button-icon {
     display: flex;
@@ -44,12 +43,11 @@
   }
 
   .header-small-button-text {
-    @include typography($medium, $font-size-small);
+    @include typography($font-size-16, $medium-500, $dark-primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: $spacing-12;
     white-space: nowrap;
-    margin-left: $margin-small;
-    color: $dark-primary;
   }
 }

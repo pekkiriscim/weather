@@ -1,16 +1,15 @@
 .header-large-search-input,
 .header-medium-search-input {
-  @include typography($regular, $font-size-small);
-  color: $light-primary;
+  @include typography($font-size-16, $regular-400, $light-primary-color);
   height: 52px;
   width: 100%;
-  padding: $padding-small-y $padding-small-x $padding-small-y 0px;
+  padding: $spacing-14 $spacing-16 $spacing-14 $spacing-0;
+  background-color: $light-secondary-color;
+  border-width: $spacing-0;
+  border-radius: $spacing-0 $border-radius $border-radius $spacing-0;
   outline: none;
-  border-width: 0px;
-  border-radius: 0px $border-radius $border-radius 0px;
-  background-color: $light-secondary;
 
   &::placeholder {
-    color: $light-tertiary;
+    @include typography($font-size-16, $regular-400, $light-tertiary-color);
   }
 }
