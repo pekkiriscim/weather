@@ -24,5 +24,40 @@ body {
     @include media-query("small") {
       padding: $spacing-16 $grid-margin-xsmall;
     }
+
+    .current {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .current-left {
+        display: flex;
+        width: 100%;
+        margin-right: $spacing-20;
+
+        .current-left-current-card {
+          width: 100%;
+          margin-right: $spacing-20;
+        }
+
+        .current-left-info-card {
+          width: 100%;
+        }
+      }
+
+      .current-right {
+        display: flex;
+        width: 100%;
+
+        .current-right-info-card {
+          width: 100%;
+          margin-right: $spacing-20;
+        }
+
+        .current-right-hourly-card {
+          width: 100%;
+        }
+      }
+    }
   }
 }

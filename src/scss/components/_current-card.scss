@@ -1,0 +1,72 @@
+.current-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: $spacing-16 $spacing-20;
+  border: $line-weight solid $light-primary-color;
+  border-radius: $border-radius;
+
+  .current-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 96px;
+    width: 96px;
+    margin: $spacing-14 $spacing-16;
+  }
+
+  .current-card-degree {
+    @include typography($font-size-36, $medium-500, $light-primary-color);
+    padding: $spacing-14 $spacing-16;
+  }
+
+  .current-card-weather {
+    @include typography($font-size-16, $regular-400, $light-primary-color);
+    padding: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
+  }
+
+  .current-card-divider {
+    padding: $spacing-14 $spacing-16;
+
+    .current-card-divider-line {
+      height: 1px;
+      background-color: $light-primary-color;
+    }
+  }
+
+  .current-card-location {
+    display: flex;
+    align-items: center;
+    padding: $spacing-14 $spacing-16;
+
+    svg {
+      min-height: 24px;
+      min-width: 24px;
+      height: 24px;
+      width: 24px;
+    }
+
+    .current-card-location-text {
+      @include typography($font-size-16, $regular-400, $light-primary-color);
+      margin-left: $spacing-12;
+    }
+  }
+
+  .current-card-date {
+    display: flex;
+    align-items: center;
+    padding: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
+
+    svg {
+      min-height: 24px;
+      min-width: 24px;
+      height: 24px;
+      width: 24px;
+    }
+    .current-card-date-text {
+      @include typography($font-size-16, $regular-400, $light-primary-color);
+      margin-left: $spacing-12;
+    }
+  }
+}

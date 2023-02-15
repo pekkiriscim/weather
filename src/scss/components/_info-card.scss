@@ -1,0 +1,64 @@
+.info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  .info-card-wind-speed,
+  .info-card-pressure,
+  .info-card-sunrise,
+  .info-card-humidity,
+  .info-card-visibility,
+  .info-card-sunset {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: $spacing-16 $spacing-20;
+    border-radius: $border-radius;
+    background-color: $light-secondary-color;
+
+    svg {
+      min-height: 48px;
+      min-width: 48px;
+      height: 48px;
+      width: 48px;
+    }
+
+    .info-card-wind-speed-text,
+    .info-card-pressure-text,
+    .info-card-sunrise-text,
+    .info-card-humidity-text,
+    .info-card-visibility-text,
+    .info-card-sunset-text {
+      display: flex;
+      flex-direction: column;
+      margin-left: $spacing-12;
+
+      .info-card-wind-speed-text-title,
+      .info-card-pressure-text-title,
+      .info-card-sunrise-text-title,
+      .info-card-humidity-text-title,
+      .info-card-visibility-text-title,
+      .info-card-sunset-text-title {
+        @include typography($font-size-16, $regular-400, $light-tertiary-color);
+        padding: $spacing-14 $spacing-16 $spacing-0 $spacing-16;
+        margin-bottom: $spacing-12;
+      }
+
+      .info-card-wind-speed-text-info,
+      .info-card-pressure-text-info,
+      .info-card-sunrise-text-info,
+      .info-card-humidity-text-info,
+      .info-card-visibility-text-info,
+      .info-card-sunset-text-info {
+        @include typography($font-size-24, $regular-400, $light-primary-color);
+        padding: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
+      }
+    }
+  }
+}
+
+.info-card-pressure,
+.info-card-visibility {
+  margin: $spacing-16 $spacing-0;
+}

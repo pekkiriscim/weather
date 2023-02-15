@@ -1,0 +1,50 @@
+.hourly-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: $spacing-16 $spacing-20;
+  border-radius: $border-radius;
+  background-color: $light-secondary-color;
+
+  .hourly-card-forecast-0,
+  .hourly-card-forecast-1,
+  .hourly-card-forecast-2,
+  .hourly-card-forecast-3,
+  .hourly-card-forecast-4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-14 $spacing-16;
+
+    .hourly-card-forecast-0-text,
+    .hourly-card-forecast-1-text,
+    .hourly-card-forecast-2-text,
+    .hourly-card-forecast-3-text,
+    .hourly-card-forecast-4-text {
+      .hourly-card-forecast-0-text-date,
+      .hourly-card-forecast-1-text-date,
+      .hourly-card-forecast-2-text-date,
+      .hourly-card-forecast-3-text-date,
+      .hourly-card-forecast-4-text-date {
+        @include typography($font-size-14, $regular-400, $light-tertiary-color);
+      }
+
+      .hourly-card-forecast-0-text-time,
+      .hourly-card-forecast-1-text-time,
+      .hourly-card-forecast-2-text-time,
+      .hourly-card-forecast-3-text-time,
+      .hourly-card-forecast-4-text-time {
+        @include typography($font-size-16, $regular-400, $light-primary-color);
+      }
+    }
+
+    .hourly-card-forecast-0-degree,
+    .hourly-card-forecast-1-degree,
+    .hourly-card-forecast-2-degree,
+    .hourly-card-forecast-3-degree,
+    .hourly-card-forecast-4-degree {
+      @include typography($font-size-16, $medium-500, $light-primary-color);
+    }
+  }
+}
