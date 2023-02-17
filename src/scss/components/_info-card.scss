@@ -17,9 +17,12 @@
     border-radius: $border-radius;
     background-color: $light-secondary-color;
 
-    svg {
-      min-height: 48px;
-      min-width: 48px;
+    .info-card-wind-speed-icon,
+    .info-card-pressure-icon,
+    .info-card-sunrise-icon,
+    .info-card-humidity-icon,
+    .info-card-visibility-icon,
+    .info-card-sunset-icon {
       height: 48px;
       width: 48px;
     }

@@ -1,7 +1,4 @@
 .header-large-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-right: $spacing-16;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
@@ -9,18 +6,12 @@
 }
 
 .header-large-search-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: $spacing-14 $spacing-12 $spacing-14 $spacing-16;
   border-radius: $border-radius $spacing-0 $spacing-0 $border-radius;
   background-color: $light-secondary-color;
 }
 
-.header-large-location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.header-large-gps {
   margin-left: $spacing-16;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
@@ -32,9 +23,6 @@
 }
 
 .header-large-theme {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-left: $spacing-16;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
@@ -46,18 +34,12 @@
 }
 
 .header-medium-search-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: $spacing-14 $spacing-12 $spacing-14 $spacing-16;
   border-radius: $border-radius $spacing-0 $spacing-0 $border-radius;
   background-color: $light-secondary-color;
 }
 
-.header-medium-location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.header-medium-gps {
   margin-left: $spacing-16;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
