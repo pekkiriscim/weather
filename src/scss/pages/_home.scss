@@ -30,14 +30,32 @@ body {
       justify-content: center;
       width: 100%;
 
+      @include media-query("xlarge") {
+        flex-wrap: wrap;
+      }
+
       .current-left {
         display: flex;
         width: 100%;
-        margin-right: $spacing-20;
+        margin-right: $spacing-16;
+
+        @include media-query("xlarge") {
+          margin-right: $spacing-0;
+          margin-bottom: $spacing-16;
+        }
+
+        @include media-query("small") {
+          flex-wrap: wrap;
+        }
 
         .current-left-current-card {
           width: 100%;
-          margin-right: $spacing-20;
+          margin-right: $spacing-16;
+
+          @include media-query("small") {
+            margin-right: $spacing-0;
+            margin-bottom: $spacing-16;
+          }
         }
 
         .current-left-info-card {
@@ -49,13 +67,37 @@ body {
         display: flex;
         width: 100%;
 
+        @include media-query("xlarge") {
+          flex-direction: row-reverse;
+        }
+
+        @include media-query("small") {
+          flex-wrap: wrap;
+        }
+
         .current-right-info-card {
           width: 100%;
-          margin-right: $spacing-20;
+          margin-right: $spacing-16;
+
+          @include media-query("xlarge") {
+            margin-right: $spacing-0;
+          }
+
+          @include media-query("small") {
+            margin-bottom: $spacing-16;
+          }
         }
 
         .current-right-hourly-card {
           width: 100%;
+
+          @include media-query("xlarge") {
+            margin-right: $spacing-16;
+          }
+
+          @include media-query("small") {
+            margin-right: $spacing-0;
+          }
         }
       }
     }
