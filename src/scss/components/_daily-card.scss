@@ -1,0 +1,40 @@
+.daily-card {
+  display: flex;
+  align-items: center;
+  padding: $spacing-16 $spacing-20;
+  border-radius: $border-radius;
+  background-color: $light-secondary-color;
+
+  .daily-card-text {
+    .daily-card-text-date {
+      @include typography($font-size-14, $regular-400, $light-tertiary-color);
+      margin-bottom: $spacing-6;
+    }
+
+    .daily-card-text-time {
+      @include typography($font-size-16, $regular-400, $light-primary-color);
+    }
+  }
+
+  .daily-card-info {
+    display: flex;
+    align-items: center;
+
+    .daily-card-info-icon {
+      height: 36px;
+      width: 36px;
+      margin-right: $spacing-12;
+    }
+
+    .daily-card-info-weather {
+      .daily-card-info-weather-degree {
+        @include typography($font-size-16, $medium-500, $light-primary-color);
+        margin-bottom: $spacing-6;
+      }
+
+      .daily-card-info-weather-info {
+        @include typography($font-size-14, $regular-400, $light-tertiary-color);
+      }
+    }
+  }
+}
