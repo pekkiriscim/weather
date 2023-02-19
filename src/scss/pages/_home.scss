@@ -104,6 +104,7 @@ body {
 
     .forecast {
       display: flex;
+      flex-wrap: wrap;
       width: 100%;
     }
   }
