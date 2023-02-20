@@ -14,7 +14,7 @@
     width: 100%;
 
     .footer-large-attribution {
-      @include typography($font-size-14, $regular-400, $light-tertiary-color);
+      @include typography($font-size-14, $regular-400, $accent-color);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -22,7 +22,7 @@
       width: 100%;
       padding: $spacing-14 $spacing-16;
       border-radius: $border-radius;
-      background-color: $light-secondary-color;
+      background-color: $tertiary-color;
       text-align: center;
 
       @include media-query("small") {
@@ -32,7 +32,7 @@
   }
 
   .footer-small {
-    @include typography($font-size-14, $regular-400, $light-tertiary-color);
+    @include typography($font-size-14, $regular-400, $accent-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@
     margin-top: $spacing-16;
     padding: $spacing-14 $spacing-16;
     border-radius: $border-radius;
-    background-color: $light-secondary-color;
+    background-color: $tertiary-color;
     text-align: center;
 
     @media screen and (min-width: 576px) {

@@ -1,10 +1,39 @@
-$light-primary-color: #0f172a;
-$light-secondary-color: #f8fafc;
-$light-tertiary-color: #64748b;
+$light-primary: #0f172a;
+$light-secondary: #ffffff;
+$light-tertiary: #f8fafc;
+$light-accent: #64748b;
 
-$dark-primary-color: #ffffff;
-$dark-secondary-color: #1e293b;
-$dark-tertiary-color: #94a3b8;
+$dark-primary: #ffffff;
+$dark-secondary: #0f172a;
+$dark-tertiary: #1e293b;
+$dark-accent: #94a3b8;
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: #{$light-primary};
+    --secondary: #{$light-secondary};
+    --tertiary: #{$light-tertiary};
+    --accent: #{$light-accent};
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #{$dark-primary};
+    --secondary: #{$dark-secondary};
+    --tertiary: #{$dark-tertiary};
+    --accent: #{$dark-accent};
+  }
+
+  img {
+    filter: brightness(100);
+  }
+}
+
+$primary-color: var(--primary);
+$secondary-color: var(--secondary);
+$tertiary-color: var(--tertiary);
+$accent-color: var(--accent);
 
 $spacing-0: 0px;
 $spacing-6: 6px;

@@ -4,6 +4,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  background-color: $secondary-color;
 
   body {
     padding: $spacing-40 $grid-margin-xlarge;

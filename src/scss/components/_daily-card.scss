@@ -7,7 +7,7 @@
   margin-bottom: $spacing-16;
   padding: $spacing-16 $spacing-20;
   border-radius: $border-radius;
-  background-color: $light-secondary-color;
+  background-color: $tertiary-color;
 
   &:nth-child(4n) {
     margin-right: $spacing-0;
@@ -66,12 +66,12 @@
 
   .daily-card-text {
     .daily-card-text-date {
-      @include typography($font-size-14, $regular-400, $light-tertiary-color);
+      @include typography($font-size-14, $regular-400, $accent-color);
       margin-bottom: $spacing-6;
     }
 
     .daily-card-text-time {
-      @include typography($font-size-16, $regular-400, $light-primary-color);
+      @include typography($font-size-16, $regular-400, $primary-color);
     }
   }
 
@@ -87,12 +87,12 @@
 
     .daily-card-info-weather {
       .daily-card-info-weather-degree {
-        @include typography($font-size-16, $medium-500, $light-primary-color);
+        @include typography($font-size-16, $medium-500, $primary-color);
         margin-bottom: $spacing-6;
       }
 
       .daily-card-info-weather-info {
-        @include typography($font-size-14, $regular-400, $light-tertiary-color);
+        @include typography($font-size-14, $regular-400, $accent-color);
       }
     }
   }

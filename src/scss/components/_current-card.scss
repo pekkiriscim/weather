@@ -4,8 +4,9 @@
   justify-content: center;
   height: 100%;
   padding: $spacing-16 $spacing-20;
-  border: $line-weight solid $light-primary-color;
+  border: $line-weight solid $primary-color;
   border-radius: $border-radius;
+  background-color: $tertiary-color;
 
   .current-card-icon {
     height: 96px;
@@ -14,12 +15,12 @@
   }
 
   .current-card-degree {
-    @include typography($font-size-36, $medium-500, $light-primary-color);
+    @include typography($font-size-36, $medium-500, $primary-color);
     padding: $spacing-14 $spacing-16;
   }
 
   .current-card-weather {
-    @include typography($font-size-16, $regular-400, $light-primary-color);
+    @include typography($font-size-16, $regular-400, $primary-color);
     padding: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
   }
 
@@ -28,7 +29,7 @@
 
     .current-card-divider-line {
       height: 1px;
-      background-color: $light-primary-color;
+      background-color: $primary-color;
     }
   }
 
@@ -43,7 +44,7 @@
     }
 
     .current-card-location-text {
-      @include typography($font-size-16, $regular-400, $light-primary-color);
+      @include typography($font-size-16, $regular-400, $primary-color);
       margin-left: $spacing-12;
     }
   }
@@ -58,7 +59,7 @@
       width: 24px;
     }
     .current-card-date-text {
-      @include typography($font-size-16, $regular-400, $light-primary-color);
+      @include typography($font-size-16, $regular-400, $primary-color);
       margin-left: $spacing-12;
     }
   }
