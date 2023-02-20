@@ -11,6 +11,12 @@
     display: none;
   }
 
+  .header-large-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .header-large-button-text {
     @include typography($font-size-16, $medium-500, $dark-primary-color);
     display: flex;
@@ -29,6 +35,12 @@
   padding: $spacing-14 $spacing-0;
   border-radius: $border-radius;
   background-color: $light-primary-color;
+
+  .header-small-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .header-small-button-text {
     @include typography($font-size-16, $medium-500, $dark-primary-color);
