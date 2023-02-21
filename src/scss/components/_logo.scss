@@ -6,6 +6,10 @@
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;
+
+  path {
+    fill: $primary-color;
+  }
 }
 
 .header-large-search-icon {
@@ -15,6 +19,10 @@
   padding: $spacing-14 $spacing-12 $spacing-14 $spacing-16;
   border-radius: $border-radius $spacing-0 $spacing-0 $border-radius;
   background-color: $tertiary-color;
+
+  path {
+    fill: $primary-color;
+  }
 }
 
 .header-large-gps {
@@ -28,6 +36,10 @@
 
   @include media-query("medium") {
     display: none;
+  }
+
+  path {
+    stroke: $primary-color;
   }
 }
 
@@ -43,6 +55,10 @@
   @include media-query("medium") {
     margin-left: auto;
   }
+
+  path {
+    stroke: $primary-color;
+  }
 }
 
 .header-medium-search-icon {
@@ -52,6 +68,10 @@
   padding: $spacing-14 $spacing-12 $spacing-14 $spacing-16;
   border-radius: $border-radius $spacing-0 $spacing-0 $border-radius;
   background-color: $tertiary-color;
+
+  path {
+    fill: $primary-color;
+  }
 }
 
 .header-medium-gps {
@@ -62,6 +82,10 @@
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;
+
+  path {
+    stroke: $primary-color;
+  }
 }
 
 .footer-large-logo {
@@ -72,6 +96,10 @@
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;
+
+  path {
+    fill: $primary-color;
+  }
 }
 
 .footer-large-top {
@@ -82,4 +110,8 @@
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;
+
+  path {
+    stroke: $primary-color;
+  }
 }

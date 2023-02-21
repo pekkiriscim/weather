@@ -38,9 +38,13 @@
     align-items: center;
     padding: $spacing-14 $spacing-16;
 
-    .current-card-location-icon {
-      height: 24px;
-      width: 24px;
+    path {
+      stroke: $primary-color;
+    }
+
+    svg {
+      min-height: 24px;
+      min-width: 24px;
     }
 
     .current-card-location-text {
@@ -54,9 +58,13 @@
     align-items: center;
     padding: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
 
-    .current-card-date-icon {
-      height: 24px;
-      width: 24px;
+    svg {
+      min-height: 24px;
+      min-width: 24px;
+
+      path {
+        fill: $primary-color;
+      }
     }
     .current-card-date-text {
       @include typography($font-size-16, $regular-400, $primary-color);

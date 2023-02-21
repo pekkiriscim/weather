@@ -62,7 +62,7 @@
         <animate
           id="x1"
           attributeName="opacity"
-          begin="0s; x1.end+.67s"
+          begin="0s; x1.end+0.67s"
           dur="1.33s"
           keyTimes="0; .38; .5; .63; .75; .86; .94; 1"
           values="1; 1; 0; 1; 0; 1; 0; 1"
