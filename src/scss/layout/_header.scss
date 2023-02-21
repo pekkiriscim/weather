@@ -6,17 +6,18 @@
   max-width: 1080px;
   width: 100%;
 
-  .header-large {
+  .header-desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 
-    .header-large-search {
+    .header-desktop-search-box {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
+      margin-right: $spacing-16;
 
       @include media-query("medium") {
         display: none;
@@ -24,7 +25,7 @@
     }
   }
 
-  .header-medium {
+  .header-tablet {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,15 +36,16 @@
       display: none;
     }
 
-    .header-medium-search {
+    .header-tablet-search-box {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
+      margin-right: $spacing-16;
     }
   }
 
-  .header-small {
+  .header-mobile {
     display: flex;
     justify-content: center;
     align-items: center;

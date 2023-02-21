@@ -1,4 +1,4 @@
-.header-large-logo {
+.header-desktop-logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
   }
 }
 
-.header-large-search-icon {
+.header-desktop-search-box-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,11 +25,11 @@
   }
 }
 
-.header-large-gps {
+.header-desktop-gps-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: $spacing-16;
+  margin-right: $spacing-16;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;
@@ -43,11 +43,11 @@
   }
 }
 
-.header-large-theme {
+.header-desktop-theme-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: $spacing-16;
+  margin-right: $spacing-16;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;
@@ -61,7 +61,7 @@
   }
 }
 
-.header-medium-search-icon {
+.header-tablet-search-box-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,11 +74,10 @@
   }
 }
 
-.header-medium-gps {
+.header-tablet-gps-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: $spacing-16;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;
@@ -88,7 +87,7 @@
   }
 }
 
-.footer-large-logo {
+.footer-desktop-logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,11 +101,10 @@
   }
 }
 
-.footer-large-top {
+.footer-desktop-scroll-to-top-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: $spacing-16;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;

@@ -1,8 +1,7 @@
-.header-large-button {
+.header-desktop-cta-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: $spacing-16;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $primary-color;
@@ -11,7 +10,7 @@
     display: none;
   }
 
-  .header-large-button-icon {
+  .header-desktop-cta-button-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +20,7 @@
     }
   }
 
-  .header-large-button-text {
+  .header-desktop-cta-button-text {
     @include typography($font-size-16, $medium-500, $secondary-color);
     display: flex;
     align-items: center;
@@ -31,7 +30,7 @@
   }
 }
 
-.header-small-button {
+.header-mobile-cta-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +39,7 @@
   border-radius: $border-radius;
   background-color: $primary-color;
 
-  .header-small-button-icon {
+  .header-mobile-cta-button-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +49,7 @@
     }
   }
 
-  .header-small-button-text {
+  .header-mobile-cta-button-text {
     @include typography($font-size-16, $medium-500, $secondary-color);
     display: flex;
     align-items: center;
