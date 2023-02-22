@@ -1,8 +1,8 @@
 .hourly-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  justify-content: center;
+  height: auto;
   padding: $spacing-16 $spacing-20;
   border-radius: $border-radius;
   background-color: $tertiary-color;

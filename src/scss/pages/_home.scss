@@ -31,75 +31,54 @@ body {
       justify-content: center;
       width: 100%;
 
-      @include media-query("xlarge") {
-        flex-wrap: wrap;
-      }
-
-      .current-left {
-        display: flex;
-        width: 100%;
+      & > * {
+        width: calc((100% - 48px) / 4);
         margin-right: $spacing-16;
 
-        @include media-query("xlarge") {
+        &:nth-child(4n) {
           margin-right: $spacing-0;
-          margin-bottom: $spacing-16;
         }
 
-        @include media-query("small") {
-          flex-wrap: wrap;
-        }
+        @include media-query("xlarge") {
+          width: calc((100% - 16px) / 2);
 
-        .current-left-current-card {
-          width: 100%;
-          margin-right: $spacing-16;
-
-          @include media-query("small") {
-            margin-right: $spacing-0;
+          &:nth-child(n) {
             margin-bottom: $spacing-16;
+          }
+
+          &:nth-child(2n) {
+            margin-right: $spacing-0;
+          }
+
+          &:nth-last-child(-n + 2) {
+            margin-bottom: $spacing-0;
+          }
+
+          &:nth-child(3) {
+            order: 4;
+            margin-right: $spacing-0;
+            margin-left: $spacing-16;
           }
         }
 
-        .current-left-info-card {
+        @include media-query("small") {
           width: 100%;
+
+          &:nth-child(n) {
+            margin-right: $spacing-0;
+            margin-left: $spacing-0;
+            margin-bottom: $spacing-16;
+          }
+
+          &:nth-child(3) {
+            margin-bottom: $spacing-0;
+          }
+          
         }
       }
 
-      .current-right {
-        display: flex;
-        width: 100%;
-
-        @include media-query("xlarge") {
-          flex-direction: row-reverse;
-        }
-
-        @include media-query("small") {
-          flex-wrap: wrap;
-        }
-
-        .current-right-info-card {
-          width: 100%;
-          margin-right: $spacing-16;
-
-          @include media-query("xlarge") {
-            margin-right: $spacing-0;
-          }
-
-          @include media-query("small") {
-            margin-bottom: $spacing-16;
-          }
-        }
-
-        .current-right-hourly-card {
-          width: 100%;
-
-          @include media-query("xlarge") {
-            margin-right: $spacing-16;
-          }
-
-          @include media-query("small") {
-            margin-right: $spacing-0;
-          }
-        }
+      @include media-query("xlarge") {
+        flex-wrap: wrap;
       }
     }
 
