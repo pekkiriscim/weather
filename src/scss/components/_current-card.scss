@@ -1,4 +1,4 @@
-.current-card {
+.current-weather-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,32 +8,29 @@
   border-radius: $border-radius;
   background-color: $tertiary-color;
 
-  .current-card-icon {
+  .current-weather-icon {
     height: 96px;
     width: 96px;
     margin: $spacing-14 $spacing-16;
   }
 
-  .current-card-degree {
+  .current-weather-temperature {
     @include typography($font-size-36, $medium-500, $primary-color);
     padding: $spacing-14 $spacing-16;
   }
 
-  .current-card-weather {
+  .current-weather-description {
     @include typography($font-size-16, $regular-400, $primary-color);
     padding: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
   }
 
-  .current-card-divider {
-    padding: $spacing-14 $spacing-16;
-
-    .current-card-divider-line {
-      height: 1px;
-      background-color: $primary-color;
-    }
+  .current-weather-card-divider {
+    height: 1px;
+    margin: $spacing-14 $spacing-16;
+    background-color: $primary-color;
   }
 
-  .current-card-location {
+  .current-location-container {
     display: flex;
     align-items: center;
     padding: $spacing-14 $spacing-16;
@@ -47,13 +44,13 @@
       min-width: 24px;
     }
 
-    .current-card-location-text {
+    .current-location {
       @include typography($font-size-16, $regular-400, $primary-color);
       margin-left: $spacing-12;
     }
   }
 
-  .current-card-date {
+  .current-date-container {
     display: flex;
     align-items: center;
     padding: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
@@ -66,7 +63,7 @@
         fill: $primary-color;
       }
     }
-    .current-card-date-text {
+    .current-date {
       @include typography($font-size-16, $regular-400, $primary-color);
       margin-left: $spacing-12;
     }

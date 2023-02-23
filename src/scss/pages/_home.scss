@@ -26,7 +26,7 @@ body {
       padding: $spacing-16 $grid-margin-xsmall;
     }
 
-    .current {
+    .current-weather-section {
       display: flex;
       justify-content: center;
       width: 100%;
@@ -71,9 +71,12 @@ body {
           }
 
           &:nth-child(3) {
+            order: 0;
+          }
+
+          &:nth-child(4) {
             margin-bottom: $spacing-0;
           }
-          
         }
       }
 
@@ -82,7 +85,7 @@ body {
       }
     }
 
-    .forecast {
+    .daily-forecast-section {
       display: flex;
       flex-wrap: wrap;
       width: 100%;

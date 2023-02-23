@@ -1,4 +1,4 @@
-.daily-card {
+.daily-weather-forecast-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,36 +64,32 @@
     }
   }
 
-  .daily-card-text {
-    .daily-card-text-date {
+  .daily-weather-forecast-date-time {
+    .daily-weather-forecast-date {
       @include typography($font-size-14, $regular-400, $accent-color);
       margin-bottom: $spacing-6;
     }
 
-    .daily-card-text-time {
+    .daily-weather-forecast-time {
       @include typography($font-size-16, $regular-400, $primary-color);
     }
   }
 
-  .daily-card-info {
-    display: flex;
-    align-items: center;
+  .daily-weather-forecast-icon {
+    height: 36px;
+    width: 36px;
+    margin-left: auto;
+    margin-right: $spacing-12;
+  }
 
-    .daily-card-info-icon {
-      height: 36px;
-      width: 36px;
-      margin-right: $spacing-12;
+  .daily-forecast-weather-details {
+    .daily-weather-forecast-temperature {
+      @include typography($font-size-16, $medium-500, $primary-color);
+      margin-bottom: $spacing-6;
     }
 
-    .daily-card-info-weather {
-      .daily-card-info-weather-degree {
-        @include typography($font-size-16, $medium-500, $primary-color);
-        margin-bottom: $spacing-6;
-      }
-
-      .daily-card-info-weather-info {
-        @include typography($font-size-14, $regular-400, $accent-color);
-      }
+    .daily-weather-forecast-description {
+      @include typography($font-size-14, $regular-400, $accent-color);
     }
   }
 }

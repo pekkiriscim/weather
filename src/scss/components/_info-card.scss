@@ -1,15 +1,16 @@
-.info-card {
+.current-weather-details-left,
+.current-weather-details-right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: auto;
 
-  .info-card-wind-speed,
-  .info-card-pressure,
-  .info-card-sunrise,
-  .info-card-humidity,
-  .info-card-visibility,
-  .info-card-sunset {
+  .wind-speed-card,
+  .pressure-card,
+  .sunrise-card,
+  .humidity-card,
+  .visibility-card,
+  .sunset-card {
     display: flex;
     align-items: center;
     height: 100%;
@@ -17,43 +18,43 @@
     border-radius: $border-radius;
     background-color: $tertiary-color;
 
-    .info-card-wind-speed-icon,
-    .info-card-pressure-icon,
-    .info-card-sunrise-icon,
-    .info-card-humidity-icon,
-    .info-card-visibility-icon,
-    .info-card-sunset-icon {
+    .wind-speed-icon,
+    .pressure-icon,
+    .sunrise-icon,
+    .humidity-icon,
+    .visibility-icon,
+    .sunset-icon {
       height: 48px;
       width: 48px;
     }
 
-    .info-card-wind-speed-text,
-    .info-card-pressure-text,
-    .info-card-sunrise-text,
-    .info-card-humidity-text,
-    .info-card-visibility-text,
-    .info-card-sunset-text {
+    .wind-speed-details,
+    .pressure-details,
+    .sunrise-details,
+    .humidity-details,
+    .visibility-details,
+    .sunset-details {
       display: flex;
       flex-direction: column;
       margin-left: $spacing-12;
 
-      .info-card-wind-speed-text-title,
-      .info-card-pressure-text-title,
-      .info-card-sunrise-text-title,
-      .info-card-humidity-text-title,
-      .info-card-visibility-text-title,
-      .info-card-sunset-text-title {
+      .wind-speed-title,
+      .pressure-title,
+      .sunrise-title,
+      .humidity-title,
+      .visibility-title,
+      .sunset-title {
         @include typography($font-size-16, $regular-400, $accent-color);
         padding: $spacing-14 $spacing-16 $spacing-0 $spacing-16;
         margin-bottom: $spacing-12;
       }
 
-      .info-card-wind-speed-text-info,
-      .info-card-pressure-text-info,
-      .info-card-sunrise-text-info,
-      .info-card-humidity-text-info,
-      .info-card-visibility-text-info,
-      .info-card-sunset-text-info {
+      .wind-speed-value,
+      .pressure-value,
+      .sunrise-value,
+      .humidity-value,
+      .visibility-value,
+      .sunset-value {
         @include typography($font-size-24, $regular-400, $primary-color);
         padding: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
       }
@@ -61,7 +62,7 @@
   }
 }
 
-.info-card-pressure,
-.info-card-visibility {
+.pressure-card,
+.visibility-card {
   margin: $spacing-16 $spacing-0;
 }
