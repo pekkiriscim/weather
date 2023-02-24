@@ -1,4 +1,4 @@
-.header-desktop-cta-button {
+.cta-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,11 +6,7 @@
   border-radius: $border-radius;
   background-color: $primary-color;
 
-  @include media-query("small") {
-    display: none;
-  }
-
-  .header-desktop-cta-button-icon {
+  .cta-button-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,36 +16,7 @@
     }
   }
 
-  .header-desktop-cta-button-text {
-    @include typography($font-size-16, $medium-500, $secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: $spacing-12;
-    white-space: nowrap;
-  }
-}
-
-.header-mobile-cta-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: $spacing-14 $spacing-0;
-  border-radius: $border-radius;
-  background-color: $primary-color;
-
-  .header-mobile-cta-button-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    path {
-      fill: $secondary-color;
-    }
-  }
-
-  .header-mobile-cta-button-text {
+  .cta-button-text {
     @include typography($font-size-16, $medium-500, $secondary-color);
     display: flex;
     align-items: center;

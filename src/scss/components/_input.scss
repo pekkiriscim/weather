@@ -1,5 +1,4 @@
-.header-desktop-search-box-input,
-.header-tablet-search-box-input {
+.search-box-input {
   @include typography($font-size-16, $regular-400, $primary-color);
   height: 52px;
   width: 100%;

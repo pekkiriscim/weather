@@ -1,8 +1,7 @@
-.header-desktop-logo {
+.logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: $spacing-16;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;
@@ -12,7 +11,7 @@
   }
 }
 
-.header-desktop-search-box-icon {
+.search-box-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,60 +24,7 @@
   }
 }
 
-.header-desktop-gps-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: $spacing-16;
-  padding: $spacing-14 $spacing-16;
-  border-radius: $border-radius;
-  background-color: $tertiary-color;
-
-  @include media-query("medium") {
-    display: none;
-  }
-
-  path {
-    stroke: $primary-color;
-  }
-}
-
-.header-desktop-theme-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: $spacing-16;
-  padding: $spacing-14 $spacing-16;
-  border-radius: $border-radius;
-  background-color: $tertiary-color;
-
-  @include media-query("medium") {
-    margin-left: auto;
-  }
-
-  @include media-query("small") {
-    margin-right: $spacing-0;
-  }
-
-  path {
-    stroke: $primary-color;
-  }
-}
-
-.header-tablet-search-box-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: $spacing-14 $spacing-12 $spacing-14 $spacing-16;
-  border-radius: $border-radius $spacing-0 $spacing-0 $border-radius;
-  background-color: $tertiary-color;
-
-  path {
-    fill: $primary-color;
-  }
-}
-
-.header-tablet-gps-button {
+.gps-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,21 +37,20 @@
   }
 }
 
-.footer-desktop-logo {
+.theme-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: $spacing-16;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;
 
   path {
-    fill: $primary-color;
+    stroke: $primary-color;
   }
 }
 
-.footer-desktop-scroll-to-top-button {
+.scroll-to-top-button {
   display: flex;
   align-items: center;
   justify-content: center;
