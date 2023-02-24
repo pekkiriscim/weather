@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1080px;
   width: 100%;
 
   & > * {
@@ -19,6 +18,11 @@
     justify-content: center;
     width: 100%;
     margin-right: $spacing-16;
+
+    & > *:first-child {
+      padding: $spacing-14 $spacing-12 $spacing-14 $spacing-16;
+      border-radius: $border-radius $spacing-0 $spacing-0 $border-radius;
+    }
 
     & > *:nth-child(2) {
       margin-right: $spacing-16;

@@ -16,32 +16,26 @@
 
   .current-weather-temperature {
     @include typography($font-size-36, $medium-500, $primary-color);
-    padding: $spacing-14 $spacing-16;
+    margin: $spacing-14 $spacing-16;
   }
 
   .current-weather-description {
     @include typography($font-size-16, $regular-400, $primary-color);
-    padding: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
-  }
-
-  .current-weather-card-divider {
-    height: 1px;
-    margin: $spacing-14 $spacing-16;
-    background-color: $primary-color;
+    margin: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
   }
 
   .current-location-container {
     display: flex;
     align-items: center;
-    padding: $spacing-14 $spacing-16;
-
-    path {
-      stroke: $primary-color;
-    }
+    margin: $spacing-14 $spacing-16;
 
     svg {
       min-height: 24px;
       min-width: 24px;
+
+      path {
+        stroke: $primary-color;
+      }
     }
 
     .current-location {
@@ -53,7 +47,7 @@
   .current-date-container {
     display: flex;
     align-items: center;
-    padding: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
+    margin: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
 
     svg {
       min-height: 24px;

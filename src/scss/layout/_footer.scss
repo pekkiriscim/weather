@@ -5,11 +5,7 @@
   width: 100%;
   margin-top: $spacing-40;
 
-  @include media-query("small") {
-    flex-wrap: wrap;
-  }
-
-  & > * {
+  & > *:nth-child(n) {
     margin-right: $spacing-16;
   }
 
@@ -26,13 +22,17 @@
     width: 100%;
     padding: $spacing-14 $spacing-16;
     border-radius: $border-radius;
-    background-color: $tertiary-color;
     text-align: center;
+    background-color: $tertiary-color;
 
     @include media-query("small") {
       margin-top: $spacing-16;
       margin-right: $spacing-0;
-      order: 3;
+      order: 1;
     }
+  }
+
+  @include media-query("small") {
+    flex-wrap: wrap;
   }
 }

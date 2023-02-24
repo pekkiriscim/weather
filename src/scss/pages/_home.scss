@@ -10,22 +10,6 @@ body {
     padding: $spacing-40 $grid-margin-xlarge;
     max-width: 1200px;
 
-    @include media-query("xlarge") {
-      padding: $spacing-32 $grid-margin-large;
-    }
-
-    @include media-query("large") {
-      padding: $spacing-24 $grid-margin-medium;
-    }
-
-    @include media-query("medium") {
-      padding: $spacing-20 $grid-margin-small;
-    }
-
-    @include media-query("small") {
-      padding: $spacing-16 $grid-margin-xsmall;
-    }
-
     .current-weather-section {
       display: flex;
       justify-content: center;
@@ -35,7 +19,7 @@ body {
         width: calc((100% - 48px) / 4);
         margin-right: $spacing-16;
 
-        &:nth-child(4n) {
+        &:last-child {
           margin-right: $spacing-0;
         }
 
@@ -55,7 +39,7 @@ body {
           }
 
           &:nth-child(3) {
-            order: 4;
+            order: 1;
             margin-right: $spacing-0;
             margin-left: $spacing-16;
           }
@@ -74,7 +58,7 @@ body {
             order: 0;
           }
 
-          &:nth-child(4) {
+          &:last-child {
             margin-bottom: $spacing-0;
           }
         }
@@ -89,6 +73,22 @@ body {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
+    }
+
+    @include media-query("xlarge") {
+      padding: $spacing-32 $grid-margin-large;
+    }
+
+    @include media-query("large") {
+      padding: $spacing-24 $grid-margin-medium;
+    }
+
+    @include media-query("medium") {
+      padding: $spacing-20 $grid-margin-small;
+    }
+
+    @include media-query("small") {
+      padding: $spacing-16 $grid-margin-xsmall;
     }
   }
 }

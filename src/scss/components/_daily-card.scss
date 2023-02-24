@@ -17,6 +17,35 @@
     margin-bottom: $spacing-0;
   }
 
+  .daily-weather-forecast-date-time {
+    .daily-weather-forecast-date {
+      @include typography($font-size-14, $regular-400, $accent-color);
+      margin-bottom: $spacing-6;
+    }
+
+    .daily-weather-forecast-time {
+      @include typography($font-size-16, $regular-400, $primary-color);
+    }
+  }
+
+  .daily-weather-forecast-icon {
+    height: 36px;
+    width: 36px;
+    margin-right: $spacing-12;
+    margin-left: auto;
+  }
+
+  .daily-forecast-weather-details {
+    .daily-weather-forecast-temperature {
+      @include typography($font-size-16, $medium-500, $primary-color);
+      margin-bottom: $spacing-6;
+    }
+
+    .daily-weather-forecast-description {
+      @include typography($font-size-14, $regular-400, $accent-color);
+    }
+  }
+
   @include media-query("xlarge") {
     width: calc((100% - 32px) / 3);
 
@@ -61,35 +90,6 @@
 
     &:nth-last-child(-n + 1) {
       margin-bottom: $spacing-0;
-    }
-  }
-
-  .daily-weather-forecast-date-time {
-    .daily-weather-forecast-date {
-      @include typography($font-size-14, $regular-400, $accent-color);
-      margin-bottom: $spacing-6;
-    }
-
-    .daily-weather-forecast-time {
-      @include typography($font-size-16, $regular-400, $primary-color);
-    }
-  }
-
-  .daily-weather-forecast-icon {
-    height: 36px;
-    width: 36px;
-    margin-left: auto;
-    margin-right: $spacing-12;
-  }
-
-  .daily-forecast-weather-details {
-    .daily-weather-forecast-temperature {
-      @include typography($font-size-16, $medium-500, $primary-color);
-      margin-bottom: $spacing-6;
-    }
-
-    .daily-weather-forecast-description {
-      @include typography($font-size-14, $regular-400, $accent-color);
     }
   }
 }

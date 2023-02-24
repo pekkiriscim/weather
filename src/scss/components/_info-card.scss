@@ -45,8 +45,7 @@
       .visibility-title,
       .sunset-title {
         @include typography($font-size-16, $regular-400, $accent-color);
-        padding: $spacing-14 $spacing-16 $spacing-0 $spacing-16;
-        margin-bottom: $spacing-12;
+        margin: $spacing-14 $spacing-16 $spacing-12 $spacing-16;
       }
 
       .wind-speed-value,
@@ -56,13 +55,13 @@
       .visibility-value,
       .sunset-value {
         @include typography($font-size-24, $regular-400, $primary-color);
-        padding: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
+        margin: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
       }
     }
   }
-}
 
-.pressure-card,
-.visibility-card {
-  margin: $spacing-16 $spacing-0;
+  .pressure-card,
+  .visibility-card {
+    margin: $spacing-16 $spacing-0;
+  }
 }
