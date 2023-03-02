@@ -8,6 +8,17 @@
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  &:focus-visible {
+    outline: none;
+    transform: scale(0.98);
+  }
 }
 
 .gps-button,
@@ -19,8 +30,14 @@
 }
 
 .search-box-icon {
+  cursor: auto;
+
   path {
     fill: $primary-color;
+  }
+
+  &:hover {
+    transform: none;
   }
 }
 
@@ -31,6 +48,8 @@
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $primary-color;
+  cursor: pointer;
+  transition: 0.2s;
 
   .cta-button-icon {
     display: flex;
@@ -49,5 +68,14 @@
     justify-content: center;
     margin-left: $spacing-12;
     white-space: nowrap;
+  }
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  &:focus-visible {
+    outline: none;
+    transform: scale(0.98);
   }
 }
