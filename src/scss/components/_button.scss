@@ -9,7 +9,7 @@
   border-radius: $border-radius;
   background-color: $tertiary-color;
   cursor: pointer;
-  transition: 0.2s;
+  transition: transform 0.2s;
 
   &:hover {
     transform: scale(0.98);
@@ -49,7 +49,7 @@
   border-radius: $border-radius;
   background-color: $primary-color;
   cursor: pointer;
-  transition: 0.2s;
+  transition: transform 0.2s;
 
   .cta-button-icon {
     display: flex;
