@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 52px;
+  min-width: 56px;
   padding: $spacing-14 $spacing-16;
   border-radius: $border-radius;
   background-color: $tertiary-color;
