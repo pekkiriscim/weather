@@ -1,0 +1,19 @@
+.loading {
+  color: transparent !important;
+  border-radius: calc($border-radius / 2);
+  background-color: $primary-color;
+  user-select: none;
+  animation: loading-animation 0.6s infinite ease reverse;
+}
+
+@keyframes loading-animation {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.04;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}

@@ -16,11 +16,13 @@
 
   .current-weather-temperature {
     @include typography($font-size-36, $medium-500, $primary-color);
+    width: fit-content;
     margin: $spacing-14 $spacing-16;
   }
 
   .current-weather-description {
     @include typography($font-size-16, $regular-400, $primary-color);
+    width: fit-content;
     margin: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
   }
 

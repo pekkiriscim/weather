@@ -16,6 +16,7 @@
     .hourly-weather-forecast-date-time {
       .hourly-weather-forecast-date {
         @include typography($font-size-14, $regular-400, $accent-color);
+        margin-bottom: $spacing-6;
       }
 
       .hourly-weather-forecast-time {
