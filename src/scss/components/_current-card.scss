@@ -9,6 +9,8 @@
   background-color: $tertiary-color;
 
   .current-weather-icon {
+    min-height: 96px;
+    min-width: 96px;
     height: 96px;
     width: 96px;
     margin: $spacing-14 $spacing-16;
@@ -16,13 +18,13 @@
 
   .current-weather-temperature {
     @include typography($font-size-36, $medium-500, $primary-color);
-    width: fit-content;
+    width: auto;
     margin: $spacing-14 $spacing-16;
   }
 
   .current-weather-description {
     @include typography($font-size-16, $regular-400, $primary-color);
-    width: fit-content;
+    width: auto;
     margin: $spacing-0 $spacing-16 $spacing-14 $spacing-16;
   }
 
@@ -42,6 +44,7 @@
 
     .current-location {
       @include typography($font-size-16, $regular-400, $primary-color);
+      width: 100%;
       margin-left: $spacing-12;
     }
   }
@@ -61,6 +64,7 @@
     }
     .current-date {
       @include typography($font-size-16, $regular-400, $primary-color);
+      width: 100%;
       margin-left: $spacing-12;
     }
   }

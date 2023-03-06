@@ -14,6 +14,9 @@
     margin: $spacing-14 $spacing-16;
 
     .hourly-weather-forecast-date-time {
+      width: 100%;
+      margin-right: $spacing-12;
+
       .hourly-weather-forecast-date {
         @include typography($font-size-14, $regular-400, $accent-color);
         margin-bottom: $spacing-6;

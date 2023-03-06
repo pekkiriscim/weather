@@ -36,6 +36,7 @@
     .sunset-details {
       display: flex;
       flex-direction: column;
+      width: 100%;
       margin-left: $spacing-12;
 
       .wind-speed-title,
