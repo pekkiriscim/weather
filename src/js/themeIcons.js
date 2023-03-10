@@ -1,4 +1,4 @@
-export const icons = {
+export const themeIcons = {
   light: `
   <svg
     width="24"

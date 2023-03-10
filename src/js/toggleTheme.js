@@ -1,4 +1,4 @@
-import { icons } from "./icons.js";
+import { themeIcons } from "./themeIcons.js";
 
 const html = document.querySelector("html");
 const themeButton = document.querySelector(".theme-button");
@@ -6,26 +6,24 @@ const themeButton = document.querySelector(".theme-button");
 let currentTheme = localStorage.getItem("theme");
 
 function getPreferredTheme() {
-  return window.matchMedia("(prefers-color-scheme: light)").matches
-    ? "light"
-    : "dark";
+  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
 }
 
 if (currentTheme === "light" || currentTheme === "dark") {
   html.classList.add(currentTheme);
-  themeButton.innerHTML = icons[currentTheme];
+  themeButton.innerHTML = themeIcons[currentTheme];
 } else {
   currentTheme = "auto";
   localStorage.setItem("theme", currentTheme);
-  themeButton.innerHTML = icons[getPreferredTheme()];
+  themeButton.innerHTML = themeIcons[getPreferredTheme()];
 }
 
-const handleTheme = () => {
+const toggleTheme = () => {
   if (currentTheme === "light" || currentTheme === "dark") {
     html.classList.remove(currentTheme);
     currentTheme = "auto";
     localStorage.setItem("theme", currentTheme);
-    themeButton.innerHTML = icons[getPreferredTheme()];
+    themeButton.innerHTML = themeIcons[getPreferredTheme()];
   } else {
     if (getPreferredTheme() === "light") {
       currentTheme = "dark";
@@ -35,8 +33,8 @@ const handleTheme = () => {
 
     localStorage.setItem("theme", currentTheme);
     html.classList.add(currentTheme);
-    themeButton.innerHTML = icons[currentTheme];
+    themeButton.innerHTML = themeIcons[currentTheme];
   }
 };
 
-themeButton.addEventListener("click", handleTheme);
+themeButton.addEventListener("click", toggleTheme);
