@@ -10,12 +10,12 @@ const replace = require("gulp-replace");
 const del = require("del");
 
 const devScript =
-  '<script type="module" src="js/icons.js"></script><script type="module" src="js/main.js"></script><script type="module" src="js/weather.js"></script>';
+  '<script type="module" src="js/toggleTheme.js"></script><script type="module" src="js/weatherApp.js"></script>';
 const prodScript =
-  '<script type="module" src="js/icons.min.js"></script><script type="module" src="js/main.min.js"></script><script type="module" src="js/weather.min.js"></script>';
+  '<script type="module" src="js/toggleTheme.min.js"></script><script type="module" src="js/weatherApp.min.js"></script>';
 
-const devModule = "/icons";
-const prodModule = "/icons.min";
+const devModule = `.js"`;
+const prodModule = `.min.js"`;
 
 gulp.task("distcss", () => {
   return gulp
@@ -45,14 +45,15 @@ gulp.task("disthtml", () => {
     .pipe(gulp.dest("dist"));
 });
 
+gulp.task("distimg", () => {
+  return gulp.src("src/img/**/*").pipe(gulp.dest("dist/img"));
+});
+
 gulp.task("distclean", () => {
   return del(["dist"]);
 });
 
-gulp.task(
-  "dist",
-  gulp.series("distclean", gulp.parallel("distcss", "distjs", "disthtml"))
-);
+gulp.task("dist", gulp.series("distclean", gulp.parallel("distcss", "distjs", "disthtml", "distimg")));
 
 gulp.task("distlive", () => {
   browserSync.init({
@@ -95,10 +96,4 @@ gulp.task("developmentlive", () => {
   gulp.watch("src/**/*.html").on("change", browserSync.reload);
 });
 
-gulp.task(
-  "development",
-  gulp.series(
-    "developmentclean",
-    gulp.parallel("developmentcss", "developmentlive")
-  )
-);
+gulp.task("development", gulp.series("developmentclean", gulp.parallel("developmentcss", "developmentlive")));
