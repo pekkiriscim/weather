@@ -3,7 +3,7 @@ import { startLoadingState, endLoadingState } from "./setLoadingState.js";
 import { currentWeatherData } from "./currentWeatherData.js";
 import { weatherForecastData } from "./weatherForecastData.js";
 
-const API_KEY = "";
+const API_KEY = process.env.KEY;
 
 const searchBoxInput = document.querySelector(".search-box-input");
 const gpsButton = document.querySelector(".gps-button");
