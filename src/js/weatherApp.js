@@ -7,6 +7,7 @@ const API_KEY = "";
 
 const searchBoxInput = document.querySelector(".search-box-input");
 const gpsButton = document.querySelector(".gps-button");
+const ctaButton = document.querySelector(".cta-button");
 const topButton = document.querySelector(".top-button");
 
 createHourlyCards();
@@ -51,6 +52,9 @@ searchBoxInput.addEventListener("keyup", async (event) => {
 });
 
 gpsButton.addEventListener("click", getUserLocation);
+ctaButton.addEventListener("click", () => {
+  window.open("https://github.com/pekkiriscim/weather");
+});
 topButton.addEventListener("click", scrollToTop);
 
 getUserLocation();
