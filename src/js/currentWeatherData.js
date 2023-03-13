@@ -1,3 +1,5 @@
+import { roundDegree, formatDate, mpsToKmh, metersToKm, capitalize } from "./convertUnits.js";
+
 export const currentWeatherData = async (data, key) => {
   const currentWeatherIcon = document.querySelector(".current-weather-icon");
   const currentWeatherTemperature = document.querySelector(".current-weather-temperature");
@@ -24,15 +26,15 @@ export const currentWeatherData = async (data, key) => {
   const currentWeatherData = await response.json();
 
   currentWeatherIcon.src = `img/animated/${currentWeatherData.weather[0].icon}.svg`;
-  currentWeatherTemperature.innerHTML = `${currentWeatherData.main.temp}°C`;
-  currentWeatherDescription.innerHTML = currentWeatherData.weather[0].description;
+  currentWeatherTemperature.innerHTML = await roundDegree(currentWeatherData.main.temp);
+  currentWeatherDescription.innerHTML = await capitalize(currentWeatherData.weather[0].description);
   currentLocation.innerHTML = currentWeatherData.name;
-  currentDate.innerHTML = currentWeatherData.dt;
+  currentDate.innerHTML = await formatDate(currentWeatherData.dt);
 
-  windSpeedValue.innerHTML = `${currentWeatherData.wind.speed} meter/sec`;
+  windSpeedValue.innerHTML = await mpsToKmh(currentWeatherData.wind.speed);
   pressureValue.innerHTML = `${currentWeatherData.main.pressure} hPa`;
-  sunriseValue.innerHTML = currentWeatherData.sys.sunrise;
+  sunriseValue.innerHTML = await formatDate(currentWeatherData.sys.sunrise, "hour");
   humidityValue.innerHTML = `${currentWeatherData.main.humidity}%`;
-  visibilityValue.innerHTML = `${currentWeatherData.visibility} meter`;
-  sunsetValue.innerHTML = currentWeatherData.sys.sunset;
+  visibilityValue.innerHTML = await metersToKm(currentWeatherData.visibility);
+  sunsetValue.innerHTML = await formatDate(currentWeatherData.sys.sunset, "hour");
 };

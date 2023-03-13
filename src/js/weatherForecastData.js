@@ -1,3 +1,5 @@
+import { roundDegree, formatDate } from "./convertUnits.js";
+
 export const weatherForecastData = async (data, key) => {
   const hourlyWeatherForecastDate = document.querySelectorAll(".hourly-weather-forecast-date");
   const hourlyWeatherForecastTime = document.querySelectorAll(".hourly-weather-forecast-time");
@@ -21,16 +23,16 @@ export const weatherForecastData = async (data, key) => {
   const weatherForecastData = await response.json();
 
   for (let index = 0; index < 5; index++) {
-    hourlyWeatherForecastDate[index].innerHTML = weatherForecastData.list[index].dt_txt.slice(0, 10);
-    hourlyWeatherForecastTime[index].innerHTML = weatherForecastData.list[index].dt_txt.slice(11, 16);
-    hourlyWeatherForecastTemperature[index].innerHTML = weatherForecastData.list[index].main.temp + "°C";
+    hourlyWeatherForecastDate[index].innerHTML = await formatDate(weatherForecastData.list[index].dt, "day");
+    hourlyWeatherForecastTime[index].innerHTML = await formatDate(weatherForecastData.list[index].dt, "hour");
+    hourlyWeatherForecastTemperature[index].innerHTML = await roundDegree(weatherForecastData.list[index].main.temp);
   }
 
   for (let index = 0; index < 40; index++) {
-    dailyWeatherForecastDate[index].innerHTML = weatherForecastData.list[index].dt_txt.slice(0, 10);
-    dailyWeatherForecastTime[index].innerHTML = weatherForecastData.list[index].dt_txt.slice(11, 16);
+    dailyWeatherForecastDate[index].innerHTML = await formatDate(weatherForecastData.list[index].dt, "short");
+    dailyWeatherForecastTime[index].innerHTML = await formatDate(weatherForecastData.list[index].dt, "hour");
     dailyWeatherForecastIcon[index].src = `img/static/${weatherForecastData.list[index].weather[0].icon}.svg`;
-    dailyWeatherForecastTemperature[index].innerHTML = weatherForecastData.list[index].main.temp + "°C";
+    dailyWeatherForecastTemperature[index].innerHTML = await roundDegree(weatherForecastData.list[index].main.temp);
     dailyWeatherForecastDescription[index].innerHTML = weatherForecastData.list[index].weather[0].main;
   }
 };
