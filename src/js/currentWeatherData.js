@@ -12,7 +12,13 @@ export const currentWeatherData = async (data, key) => {
   const visibilityValue = document.querySelector(".visibility-value");
   const sunsetValue = document.querySelector(".sunset-value");
 
-  const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${data}&appid=${key}&units=metric`;
+  let API_URL;
+
+  if (data.lat && data.lon) {
+    API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lon}&appid=${key}&units=metric`;
+  } else {
+    API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${data}&appid=${key}&units=metric`;
+  }
 
   const response = await fetch(API_URL);
   const currentWeatherData = await response.json();

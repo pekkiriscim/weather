@@ -1,29 +1,15 @@
 import { createHourlyCards, createDailyCards } from "./weatherForecastCards.js";
+import { startLoadingState, endLoadingState } from "./setLoadingState.js";
 import { currentWeatherData } from "./currentWeatherData.js";
 import { weatherForecastData } from "./weatherForecastData.js";
 
 const API_KEY = "";
 
 const searchBoxInput = document.querySelector(".search-box-input");
+const gpsButton = document.querySelector(".gps-button");
 
 createHourlyCards();
 createDailyCards();
-
-const startLoadingState = async () => {
-  const dynamicData = document.querySelectorAll(".dynamic-data");
-
-  for (let index = 0; index < dynamicData.length; index++) {
-    dynamicData[index].classList.add("loading");
-  }
-};
-
-const endLoadingState = async () => {
-  const dynamicData = document.querySelectorAll(".dynamic-data");
-
-  for (let index = 0; index < dynamicData.length; index++) {
-    dynamicData[index].classList.remove("loading");
-  }
-};
 
 const fetchWeatherData = async (data) => {
   await startLoadingState();
@@ -32,10 +18,30 @@ const fetchWeatherData = async (data) => {
   await endLoadingState();
 };
 
+const getUserLocation = async () => {
+  const successCallback = async (position) => {
+    const data = {
+      lat: position.coords.latitude,
+      lon: position.coords.longitude,
+    };
+
+    await fetchWeatherData(data);
+  };
+
+  const errorCallback = (error) => {
+    console.log(error);
+    fetchWeatherData("Istanbul");
+  };
+
+  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+};
+
 searchBoxInput.addEventListener("keyup", async (event) => {
   if (event.keyCode === 13) {
-    await fetchWeatherData(searchBoxInput.value, API_KEY);
+    await fetchWeatherData(searchBoxInput.value);
   }
 });
 
-fetchWeatherData("Istanbul");
+gpsButton.addEventListener("click", getUserLocation);
+
+getUserLocation();

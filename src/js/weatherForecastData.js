@@ -9,7 +9,13 @@ export const weatherForecastData = async (data, key) => {
   const dailyWeatherForecastTemperature = document.querySelectorAll(".daily-weather-forecast-temperature");
   const dailyWeatherForecastDescription = document.querySelectorAll(".daily-weather-forecast-description");
 
-  const API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${data}&appid=${key}&units=metric`;
+  let API_URL;
+
+  if (data.lat && data.lon) {
+    API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.lat}&lon=${data.lon}&appid=${key}&units=metric`;
+  } else {
+    API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${data}&appid=${key}&units=metric`;
+  }
 
   const response = await fetch(API_URL);
   const weatherForecastData = await response.json();
