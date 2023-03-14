@@ -40,4 +40,9 @@ export const themeIcons = {
     />
   </svg>
   `,
+
+  favicon: {
+    light: "src/img/favicon-dark.ico",
+    dark: "src/img/favicon-light.ico",
+  },
 };
