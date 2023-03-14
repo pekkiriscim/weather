@@ -1,7 +1,11 @@
+import { inject } from "@vercel/analytics";
+
 import { createHourlyCards, createDailyCards } from "./weatherForecastCards.js";
 import { startLoadingState, endLoadingState } from "./setLoadingState.js";
 import { currentWeatherData } from "./currentWeatherData.js";
 import { weatherForecastData } from "./weatherForecastData.js";
+
+inject();
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
