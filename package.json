@@ -1,12 +1,13 @@
 {
   "name": "weather",
+  "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "Quickly access accurate weather information with a clean, modern and user-friendly design.",
-  "main": "index.js",
   "scripts": {
-    "development": "gulp development",
-    "dist": "gulp dist",
-    "production": "gulp production"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -19,18 +20,10 @@
   },
   "homepage": "https://github.com/pekkiriscim/weather#readme",
   "devDependencies": {
-    "browser-sync": "^2.27.11",
-    "del": "^6.1.1",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-replace": "^1.1.4",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-terser": "^2.1.0",
-    "sass": "^1.58.0"
+    "autoprefixer": "^10.4.14",
+    "sass": "^1.59.2",
+    "vite": "^4.1.0",
+    "vite-plugin-static-copy": "^0.13.1"
   },
   "browserslist": [
     "> 0%"
