@@ -31,7 +31,7 @@ export const weatherForecastData = async (data, key) => {
   for (let index = 0; index < 40; index++) {
     dailyWeatherForecastDate[index].innerHTML = await formatDate(weatherForecastData.list[index].dt, "short");
     dailyWeatherForecastTime[index].innerHTML = await formatDate(weatherForecastData.list[index].dt, "hour");
-    dailyWeatherForecastIcon[index].src = `img/static/${weatherForecastData.list[index].weather[0].icon}.svg`;
+    dailyWeatherForecastIcon[index].src = `src/img/static/${weatherForecastData.list[index].weather[0].icon}.svg`;
     dailyWeatherForecastTemperature[index].innerHTML = await roundDegree(weatherForecastData.list[index].main.temp);
     dailyWeatherForecastDescription[index].innerHTML = weatherForecastData.list[index].weather[0].main;
   }
