@@ -1,0 +1,48 @@
+.alert {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: $spacing-16;
+  padding: $spacing-16;
+  border-radius: $border-radius;
+  background-color: $tertiary-color;
+
+  .alert-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $spacing-16;
+
+    path {
+      stroke: $primary-color;
+    }
+
+    circle {
+      stroke: $primary-color;
+    }
+
+    @include media-query("small") {
+      margin-right: $spacing-16;
+      margin-bottom: $spacing-16;
+    }
+  }
+
+  .alert-message {
+    @include typography($font-size-16, $regular-400, $primary-color);
+    margin-right: $spacing-16;
+
+    @include media-query("small") {
+      width: calc(100% - 40px);
+      margin-right: $spacing-0;
+      margin-bottom: $spacing-16;
+    }
+  }
+
+  .alert-button {
+    margin-left: auto;
+  }
+
+  @include media-query("small") {
+    flex-wrap: wrap;
+  }
+}

@@ -81,3 +81,29 @@
     transform: scale(0.98);
   }
 }
+
+.alert-button {
+  @include typography($font-size-16, $medium-500, $secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-14 $spacing-16;
+  border-radius: calc($border-radius / 2);
+  background-color: $primary-color;
+  cursor: pointer;
+  transition: transform 0.2s;
+  white-space: nowrap;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  &:focus-visible {
+    outline: none;
+    transform: scale(0.98);
+  }
+
+  @include media-query("small") {
+    width: 100%;
+  }
+}

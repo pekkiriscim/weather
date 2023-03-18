@@ -20,6 +20,17 @@ export const weatherForecastData = async (data, key) => {
   }
 
   const response = await fetch(API_URL);
+
+  if (!response.ok) {
+    if (response.status === 404) {
+      throw new Error(`Sorry, we couldn't find ${data}. Please double-check the spelling and try again.`);
+    } else {
+      throw new Error(
+        "Oops! We're having trouble getting the latest weather information right now. Please try again later or contact support if the problem persists."
+      );
+    }
+  }
+
   const weatherForecastData = await response.json();
 
   for (let index = 0; index < 5; index++) {

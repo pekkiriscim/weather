@@ -1,11 +1,8 @@
-import { inject } from "@vercel/analytics";
-
 import { createHourlyCards, createDailyCards } from "./weatherForecastCards.js";
 import { startLoadingState, endLoadingState } from "./setLoadingState.js";
+import { handleError } from "./handleError.js";
 import { currentWeatherData } from "./currentWeatherData.js";
 import { weatherForecastData } from "./weatherForecastData.js";
-
-inject();
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
@@ -18,10 +15,21 @@ createHourlyCards();
 createDailyCards();
 
 const fetchWeatherData = async (data) => {
-  await startLoadingState();
-  await currentWeatherData(data, API_KEY);
-  await weatherForecastData(data, API_KEY);
-  await endLoadingState();
+  try {
+    await startLoadingState();
+    await currentWeatherData(data, API_KEY);
+    await weatherForecastData(data, API_KEY);
+    await endLoadingState();
+  } catch (error) {
+    if (error.message === "Failed to fetch") {
+      await handleError(
+        "Uh oh! It looks like you're not connected to the internet. Please check your connection and try again.",
+        "Refresh Page"
+      );
+    } else {
+      await handleError(error.message, "Try Again");
+    }
+  }
 };
 
 const getUserLocation = async () => {
@@ -56,9 +64,11 @@ searchBoxInput.addEventListener("keyup", async (event) => {
 });
 
 gpsButton.addEventListener("click", getUserLocation);
+
 ctaButton.addEventListener("click", () => {
   window.open("https://github.com/pekkiriscim/weather");
 });
+
 topButton.addEventListener("click", scrollToTop);
 
 getUserLocation();

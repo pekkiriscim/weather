@@ -1,5 +1,8 @@
 export const startLoadingState = async () => {
   const dynamicData = document.querySelectorAll(".dynamic-data");
+  const searchBoxInput = document.querySelector(".search-box-input");
+
+  searchBoxInput.blur();
 
   for (let index = 0; index < dynamicData.length; index++) {
     dynamicData[index].classList.add("loading");
