@@ -1,3 +1,4 @@
+import { filterForecastData } from "./filterForecastData.js";
 import { roundDegree, formatDate } from "./convertUnits.js";
 
 export const weatherForecastData = async (data, key) => {
@@ -32,6 +33,8 @@ export const weatherForecastData = async (data, key) => {
   }
 
   const weatherForecastData = await response.json();
+
+  await filterForecastData(weatherForecastData);
 
   for (let index = 0; index < 5; index++) {
     hourlyWeatherForecastDate[index].innerHTML = await formatDate(weatherForecastData.list[index].dt, "day");

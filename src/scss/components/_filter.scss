@@ -1,0 +1,39 @@
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: $spacing-16;
+  width: 100%;
+  margin-bottom: $spacing-16;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-item {
+    @include typography($font-size-16, $regular-400, $primary-color);
+    padding: $spacing-10 $spacing-12;
+    border-radius: calc($border-radius / 2);
+    background-color: $tertiary-color;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &.active {
+      @include typography($font-size-16, $regular-400, $tertiary-color);
+      background-color: $primary-color;
+    }
+
+    &:hover {
+      transform: scale(0.98);
+    }
+
+    &:focus-visible {
+      outline: none;
+      transform: scale(0.98);
+    }
+  }
+}

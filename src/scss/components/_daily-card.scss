@@ -3,19 +3,9 @@
   align-items: center;
   justify-content: space-between;
   width: calc((100% - 48px) / 4);
-  margin-right: $spacing-16;
-  margin-bottom: $spacing-16;
   padding: $spacing-16 $spacing-20;
   border-radius: $border-radius;
   background-color: $tertiary-color;
-
-  &:nth-child(4n) {
-    margin-right: $spacing-0;
-  }
-
-  &:nth-last-child(-n + 4) {
-    margin-bottom: $spacing-0;
-  }
 
   .daily-weather-forecast-date-time {
     width: 100%;
@@ -53,48 +43,13 @@
 
   @include media-query("xlarge") {
     width: calc((100% - 32px) / 3);
-
-    &:nth-child(n) {
-      margin-right: $spacing-16;
-      margin-bottom: $spacing-16;
-    }
-
-    &:nth-child(3n) {
-      margin-right: $spacing-0;
-    }
-
-    &:nth-last-child(-n + 1) {
-      margin-bottom: $spacing-0;
-    }
   }
 
   @include media-query("large") {
     width: calc((100% - 16px) / 2);
-
-    &:nth-child(n) {
-      margin-right: $spacing-16;
-      margin-bottom: $spacing-16;
-    }
-
-    &:nth-child(2n) {
-      margin-right: $spacing-0;
-    }
-
-    &:nth-last-child(-n + 2) {
-      margin-bottom: $spacing-0;
-    }
   }
 
   @include media-query("small") {
     width: 100%;
-
-    &:nth-child(n) {
-      margin-right: $spacing-0;
-      margin-bottom: $spacing-16;
-    }
-
-    &:nth-last-child(-n + 1) {
-      margin-bottom: $spacing-0;
-    }
   }
 }
