@@ -70,10 +70,23 @@ body {
     }
 
     .daily-forecast-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-row-gap: $spacing-16;
+      grid-column-gap: $spacing-16;
       width: 100%;
+
+      @include media-query("xlarge") {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include media-query("large") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include media-query("small") {
+        grid-template-columns: 1fr;
+      }
     }
 
     @include media-query("xlarge") {

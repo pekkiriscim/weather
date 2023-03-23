@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc((100% - 48px) / 4);
   padding: $spacing-16 $spacing-20;
   border-radius: $border-radius;
   background-color: $tertiary-color;
@@ -39,17 +38,5 @@
     .daily-weather-forecast-description {
       @include typography($font-size-14, $regular-400, $accent-color);
     }
-  }
-
-  @include media-query("xlarge") {
-    width: calc((100% - 32px) / 3);
-  }
-
-  @include media-query("large") {
-    width: calc((100% - 16px) / 2);
-  }
-
-  @include media-query("small") {
-    width: 100%;
   }
 }
