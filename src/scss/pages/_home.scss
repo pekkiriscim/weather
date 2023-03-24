@@ -9,6 +9,7 @@ body {
   body {
     padding: $spacing-40 $grid-margin-xlarge;
     max-width: 1200px;
+    user-select: none;
 
     .current-weather-section {
       display: flex;
